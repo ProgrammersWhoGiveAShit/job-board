@@ -1,0 +1,5 @@
+.DS_Store
+/assets/images/*
+/assets/attachments/*
+*.patch
+config.php
