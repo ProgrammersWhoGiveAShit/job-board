@@ -65,7 +65,16 @@
     <?php if ($job->how_to_apply != ''): ?>
     <div class="well">
         <h2><?php echo $lang->t('jobs|how_to_apply'); ?></h2>
-        <p class="lead"><?php _e($job->how_to_apply); ?></p>
+        <p class="lead">
+            <?php echo Parsedown::instance()->parse($job->how_to_apply); ?>
+        </p>
+    </div>
+    <?php endif; ?>
+    
+    <?php if ($job->closing_date != ''): ?>
+    <div class="well">
+        <h2><?php echo $lang->t('jobs|closing_date'); ?></h2>
+        <p class="lead"><?php _e($job->closing_date); ?></p>
     </div>
     <?php endif; ?>
 <?php include 'footer.php'; ?>

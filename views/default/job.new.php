@@ -85,6 +85,13 @@
               <textarea id="how_to_apply" name="how_to_apply" class="form-control input-lg" rows="2"></textarea>
             </div>
         </div>
+        
+        <div class="form-group">
+        <label for="closing_date" class="col-sm-3 control-label input-lg"><?php echo $lang->t('jobs|closing_date'); ?></label>
+            <div class="col-sm-8">
+              <input type="date" id="closing_date" name="closing_date" class="form-control input-lg" rows="2"></textarea>
+            </div>
+        </div>
 
         
         <div class="form-group">

@@ -1,10 +1,21 @@
+# Getting Started
+----
+Install Docker: https://docs.docker.com/engine/installation/
+```
+docker build -t programmerswhogiveashit .
+
+docker run -v .:/srv/http --name programmers-who-give-a-shit-job-board -p 4683:80 -d programmerswhogiveashit
+
+open localhost:4683
+```
+
 About
 -----
 Jobskee is an open source job board with minimal configuration and relatively small footprint.
 
 Author
 ------
-Elinore Tenorio (elinore.tenorio@gmail.com)  
+Elinore Tenorio (elinore.tenorio@gmail.com)
 Manila, Philippines
 
 Stacks used
@@ -32,7 +43,7 @@ Installation
 5. Change file permission of /assets/images and /assets/attachments to 777
 6. Check that all .htaccess files were uploaded
 
-Default admin login info: 
+Default admin login info:
 Email: admin@example.com
 Password: admin
 
@@ -83,25 +94,25 @@ These are the recommended settings:
 
 Using "localhost"
 
-﻿// SMTP SETTINGS  
-define('SMTP_ENABLED', true);  
-define('SMTP_AUTH', false);  
-define('SMTP_URL', 'localhost');  
-define('SMTP_USER', 'email@example.com');  
-define('SMTP_PASS', '');  
-define('SMTP_PORT', 25);  
-define('SMTP_SECURE', '');  
+﻿// SMTP SETTINGS
+define('SMTP_ENABLED', true);
+define('SMTP_AUTH', false);
+define('SMTP_URL', 'localhost');
+define('SMTP_USER', 'email@example.com');
+define('SMTP_PASS', '');
+define('SMTP_PORT', 25);
+define('SMTP_SECURE', '');
 
 and using Gmail
 
-// SMTP SETTINGS  
-define('SMTP_ENABLED', true);  
-define('SMTP_AUTH', true);  
-define('SMTP_URL', 'smtp.gmail.com');  
-define('SMTP_USER', 'email@gmail.com');  
-define('SMTP_PASS', 'gmail password);  
-define('SMTP_PORT', 465);  
-define('SMTP_SECURE', 'ssl');  
+// SMTP SETTINGS
+define('SMTP_ENABLED', true);
+define('SMTP_AUTH', true);
+define('SMTP_URL', 'smtp.gmail.com');
+define('SMTP_USER', 'email@gmail.com');
+define('SMTP_PASS', 'gmail password);
+define('SMTP_PORT', 465);
+define('SMTP_SECURE', 'ssl');
 
 APPLICATION URL PATHS - as commented in the file, you need to provide your full URL including the trailing slashes.
 

@@ -48,6 +48,9 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="<?php _e(BASE_URL); ?>"><?php echo $lang->t('link|home'); ?></a></li>
             <li><a href="<?php _e(BASE_URL .'about'); ?>"><?php echo $lang->t('link|about'); ?></a></li>
+            <li><a href="<?php _e(BASE_URL); ?>jobs/new" <?php if (ALLOW_JOB_POST == INACTIVE) { echo 'disabled'; } ?>>
+            <?php echo $lang->t('jobs|post_job'); ?>  
+            </a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang->t('link|categories'); ?> <b class="caret"></b></a>
               <ul class="dropdown-menu">

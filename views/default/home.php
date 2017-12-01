@@ -15,7 +15,7 @@
         <span class="job-title"><?php _e($job->title); ?></span>&nbsp;
         <span class="job-company"><?php _e($job->company_name); ?></span>
         <span class="job-salary"><?php _e($job->salary); ?></span>
-        <span class="badge pull-right"><?php niceDate($job->created); ?></span>
+        <span class="badge pull-right"><?php echo $lang->t('jobs|closing_date'); ?> <?php niceDate($job->closing_date); ?></span>
     </h4>
     </a>
 <?php endforeach; ?>
