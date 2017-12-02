@@ -25,7 +25,7 @@ include 'models/class.phpmailer.php';
 include 'models/class.smtp.php';
 include 'models/rb.php';
 spl_autoload_register(function ($class) {
-	if (file_exists("models/{$class}.php")) { include "models/{$class}.php"; }	
+	if (file_exists("models/{$class}.php")) { include "models/{$class}.php"; }
 });
 
 // LOAD TRANSLATION
@@ -63,9 +63,9 @@ define('BASE_URL','https://www.programmerswhogiveashit.com/'); // always include
 
 // DATABASE SETTINGS
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'nuancedi_programmerswhogiveashit');
-define('DB_USER', 'nuancedi_giveash');
-define('DB_PASS', '8P9z2HIrlxXe');
+define('DB_NAME', 'programmerswhogiveashit');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
 // GOOGLE ANALYTICS TRACKING
 define('GA_TRACKING', 'UA-110455016-1');

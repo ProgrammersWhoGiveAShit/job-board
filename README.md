@@ -4,9 +4,25 @@ Install Docker: https://docs.docker.com/engine/installation/
 ```
 docker build -t programmerswhogiveashit .
 
-docker run -v .:/srv/http --name programmers-who-give-a-shit-job-board -p 4683:80 -d programmerswhogiveashit
+docker run --rm -it -p 4684:80 -v `pwd`:/srv/http programmerswhogiveashit /bin/bash
 
-open localhost:4683
+# TODO - this is meant to load the DB dump but it doesn't work
+# Only starts MySQL
+load-database
+
+# TODO - I can't figure out how to make the DB dump load in one command
+# Go into mysql and do it there
+
+mysql
+
+source db_dump.sql;
+
+# ctrl-c to exit MySQL
+
+start-servers
+
+# In another terminal
+open localhost:4684
 ```
 
 About

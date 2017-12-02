@@ -4,10 +4,10 @@ MAINTAINER Grey Christoforo <grey@christoforo.net>
 COPY local-setup/install-lamp.sh /usr/sbin/install-lamp
 RUN install-lamp
 COPY config.local.php config.php
-RUN mysql programmerswhogiveashit db_dump.sql
+COPY local-setup/db_dump.sql db_dump.sql
 
 # generate our ssl key
-ADD setupApacheSSLKey.sh /usr/sbin/setup-apache-ssl-key
+ADD local-setup/setupApacheSSLKey.sh /usr/sbin/setup-apache-ssl-key
 ENV SUBJECT /C=US/ST=CA/L=CITY/O=ORGANIZATION/OU=UNIT/CN=localhost
 ENV DO_SSL_LETS_ENCRYPT_FETCH false
 ENV USE_EXISTING_LETS_ENCRYPT false
@@ -28,11 +28,12 @@ EXPOSE 5432
 EXPOSE 3306
 
 # start servers
-COPY local-setup/startServers.sh /usr/sbin/start-servers
+COPY local-setup/start-servers.sh /usr/sbin/start-servers
+COPY local-setup/load-database.sh /usr/sbin/load-database
+RUN load-database
 ENV START_APACHE true
-ENV APACHE_ENABLE_PORT_80 false
+ENV APACHE_ENABLE_PORT_80 true
 ENV START_MYSQL true
-ENV START_POSTGRESQL false
 ENV ENABLE_DAV false
 ENV ENABLE_CRON true
 CMD start-servers; sleep infinity

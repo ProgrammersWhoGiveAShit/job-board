@@ -19,10 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nuancedi_programmerswhogiveashit`
+-- Database: `programmerswhogiveashit`
 --
-CREATE DATABASE IF NOT EXISTS `nuancedi_programmerswhogiveashit` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `nuancedi_programmerswhogiveashit`;
+CREATE DATABASE IF NOT EXISTS `programmerswhogiveashit` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `programmerswhogiveashit`;
 
 -- --------------------------------------------------------
 

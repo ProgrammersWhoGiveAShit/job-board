@@ -59,7 +59,7 @@ define('SMTP_PORT', 465);
 define('SMTP_SECURE', 'ssl');
 
 // APPLICATION URL PATHS
-define('BASE_URL','https://www.programmerswhogiveashit.com/'); // always include the trailing slash at the end
+define('BASE_URL','http://localhost:4684/'); // always include the trailing slash at the end
 
 // DATABASE SETTINGS
 define('DB_HOST', 'localhost');
