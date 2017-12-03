@@ -6,19 +6,6 @@ docker build -t programmerswhogiveashit .
 
 docker run --rm -it -p 4684:80 -v `pwd`:/srv/http programmerswhogiveashit /bin/bash
 
-# TODO - this is meant to load the DB dump but it doesn't work
-# Only starts MySQL
-load-database
-
-# TODO - I can't figure out how to make the DB dump load in one command
-# Go into mysql and do it there
-
-mysql
-
-source db_dump.sql;
-
-# ctrl-c to exit MySQL
-
 start-servers
 
 # In another terminal
