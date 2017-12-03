@@ -44,15 +44,16 @@
                 </p>
             <?php endif; ?>
         </div>
-         <?php if ($job->closing_date != ''): ?>
-        <div class="well">
-            <h2><?php echo $lang->t('jobs|closing_date'); ?></h2>
-            <p class="lead">
-              <?php _e($job->closing_date,'r'); ?>
-            </p>
-        </div>
-        <?php endif; ?>
+
         <div class="col-md-3">
+            <?php if ($job->closing_date != ''): ?>
+            <div class="well">
+                <h2><?php echo $lang->t('jobs|closing_date'); ?></h2>
+                <p class="lead">
+                 <?php _e($job->closing_date,'r'); ?>
+                </p>
+            </div>
+            <?php endif; ?>
             <div class="list-group">
                 <a class="list-group-item text-center">
                     <?php Blocks::showBlockByID(1); ?>
